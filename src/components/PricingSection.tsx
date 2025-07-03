@@ -7,46 +7,42 @@ export const PricingSection = () => {
   const plans = [
     {
       name: "Starter",
-      description: "For individual analysts and small teams",
-      monthlyPrice: 299,
-      annualPrice: 2990,
+      description: "For insight on a specific industry",
+      quarterlyPrice: 99,
+      annualPrice: 299,
       features: [
-        "Up to 50 company scores/month",
+        "One industry report per quarter",
         "Basic peer benchmarking",
-        "Email alerts",
+        "Stored report access for up to 2 years",
         "Standard support",
-        "API access (limited)"
       ],
       popular: false
     },
     {
       name: "Professional",
-      description: "For active investment teams",
-      monthlyPrice: 799,
-      annualPrice: 7990,
+      description: "For individual analysts and small teams",
+      monthlyPrice: 499,
+      annualPrice: 1499,
       features: [
-        "Up to 500 company scores/month",
+        "Up to 20 industry reports per quarter",
+        "Custom report narratives for 5 industries",
         "Advanced peer analytics",
-        "Real-time alerts",
+        "Stored report access for lifetime",
         "Priority support",
-        "Full API access",
-        "Custom reports",
-        "Team collaboration tools"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      description: "For large firms and institutions",
-      monthlyPrice: "Custom",
-      annualPrice: "Custom",
+      description: "For medium to large firms and investment teams",
+      monthlyPrice: "Contact Us",
+      annualPrice: "Contact Us",
       features: [
-        "Unlimited scoring",
-        "White-label options",
-        "Dedicated success manager",
-        "Custom integrations",
-        "Advanced analytics",
-        "Priority data feeds",
+        "Complete S&P 500 industry report coverage",
+        "Custom report narratives for all industries",
+        "Stored report access for lifetime plus shared access across company",
+        "Premium support",
+        "Additional custom industry reports available to meet internal use cases",
         "SLA guarantees"
       ],
       popular: false
