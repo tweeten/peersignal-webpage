@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +20,16 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Wright-inspired earth tones
+				'burnt-red': '#C4504D',
+				'brass': '#B5860B',
+				'cream': '#F7F3E9',
+				'charcoal': '#2F2F2F',
+				'sage-green': '#87A96B',
+				'soft-blue': '#7FCDCD',
+				'gold-accent': '#D4AF37',
+				'muted-orange': '#CC8B65',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -62,6 +73,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

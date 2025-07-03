@@ -13,7 +13,7 @@ const Index = () => {
   const [showEmailModal, setShowEmailModal] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen bg-cream font-inter">
       <Header />
       <HeroSection onViewSample={() => setShowEmailModal(true)} />
       <SignalScoreOverview />

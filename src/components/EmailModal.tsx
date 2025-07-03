@@ -14,11 +14,9 @@ export const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
     console.log('Email signup:', { email, company, role });
     setIsSubmitted(true);
     
-    // Reset form after 2 seconds and close modal
     setTimeout(() => {
       setIsSubmitted(false);
       setEmail('');
@@ -31,23 +29,23 @@ export const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl">
+    <div className="fixed inset-0 bg-charcoal/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-cream rounded-sm max-w-md w-full shadow-2xl">
         <div className="p-8">
           {!isSubmitted ? (
             <>
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-semibold text-slate-900 mb-2">
+                <h3 className="text-2xl font-semibold text-charcoal mb-2 font-playfair">
                   Access Sample Report
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-charcoal/70">
                   Get instant access to a comprehensive SignalScore™ analysis report.
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
                     Work Email *
                   </label>
                   <input
@@ -56,13 +54,13 @@ export const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-brass/30 rounded-sm focus:ring-2 focus:ring-burnt-red focus:border-transparent bg-white"
                     placeholder="you@company.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="company" className="block text-sm font-medium text-charcoal mb-2">
                     Company *
                   </label>
                   <input
@@ -71,13 +69,13 @@ export const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-brass/30 rounded-sm focus:ring-2 focus:ring-burnt-red focus:border-transparent bg-white"
                     placeholder="Your company name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="role" className="block text-sm font-medium text-slate-700 mb-2">
+                  <label htmlFor="role" className="block text-sm font-medium text-charcoal mb-2">
                     Role *
                   </label>
                   <select
@@ -85,7 +83,7 @@ export const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
                     required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-brass/30 rounded-sm focus:ring-2 focus:ring-burnt-red focus:border-transparent bg-white"
                   >
                     <option value="">Select your role</option>
                     <option value="analyst">Analyst</option>
@@ -100,34 +98,34 @@ export const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
                   <button
                     type="button"
                     onClick={onClose}
-                    className="flex-1 px-4 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors"
+                    className="flex-1 px-4 py-3 border-2 border-brass text-charcoal rounded-sm hover:bg-brass/10 transition-colors font-medium"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-lg hover:opacity-90 transition-opacity"
+                    className="flex-1 px-4 py-3 bg-burnt-red text-cream rounded-sm hover:bg-burnt-red/90 transition-opacity font-medium"
                   >
                     Get Sample Report
                   </button>
                 </div>
               </form>
 
-              <p className="text-xs text-slate-500 text-center mt-4">
+              <p className="text-xs text-charcoal/60 text-center mt-4">
                 By submitting, you agree to receive communication from PeerSignal.io
               </p>
             </>
           ) : (
             <div className="text-center py-8">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">✓</span>
+              <div className="w-16 h-16 bg-sage-green/20 rounded-sm flex items-center justify-center mx-auto mb-4">
+                <div className="w-8 h-8 bg-sage-green rounded-sm flex items-center justify-center">
+                  <span className="text-cream text-sm">✓</span>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
+              <h3 className="text-xl font-semibold text-charcoal mb-2 font-playfair">
                 Report Sent!
               </h3>
-              <p className="text-slate-600">
+              <p className="text-charcoal/70">
                 Check your email for the sample SignalScore™ report.
               </p>
             </div>
