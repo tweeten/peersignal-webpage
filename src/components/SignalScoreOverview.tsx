@@ -8,7 +8,7 @@ export const SignalScoreOverview = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-playfair font-bold text-charcoal mb-6">
             What is{' '}
-            <span className="text-burnt-red">
+            <span className="text-charcoal">
               SignalScore™
             </span>
             ?
@@ -65,7 +65,7 @@ export const SignalScoreOverview = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-sage-green rounded-full"></div>
-                  <span className="text-charcoal/70">Standardized 1-10 scoring scale</span>
+                  <span className="text-charcoal/70">Standardized 0-100 scoring scale</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-soft-blue rounded-full"></div>
@@ -87,26 +87,26 @@ export const SignalScoreOverview = () => {
                   
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-charcoal font-medium">Financial Health</span>
+                      <span className="text-charcoal font-medium">Revenue Growth</span>
                       <div className="flex items-center space-x-2">
-                        <div className="w-12 h-1.5 bg-sage-green rounded-full"></div>
-                        <span className="text-sm font-semibold font-playfair">9.2</span>
+                        <div className="w-12 h-1.5 bg-sage-green rounded-full" style={{width: '92%'}}></div>
+                        <span className="text-sm font-semibold font-playfair">92</span>
                       </div>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <span className="text-charcoal font-medium">Market Position</span>
+                      <span className="text-charcoal font-medium">ROIC</span>
                       <div className="flex items-center space-x-2">
-                        <div className="w-10 h-1.5 bg-soft-blue rounded-full"></div>
-                        <span className="text-sm font-semibold font-playfair">8.1</span>
+                        <div className="w-10 h-1.5 bg-soft-blue rounded-full" style={{width: '81%'}}></div>
+                        <span className="text-sm font-semibold font-playfair">81</span>
                       </div>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <span className="text-charcoal font-medium">Growth Trajectory</span>
+                      <span className="text-charcoal font-medium">EBITDA Margin</span>
                       <div className="flex items-center space-x-2">
-                        <div className="w-11 h-1.5 bg-brass rounded-full"></div>
-                        <span className="text-sm font-semibold font-playfair">8.7</span>
+                        <div className="w-11 h-1.5 bg-brass rounded-full" style={{width: '87%'}}></div>
+                        <span className="text-sm font-semibold font-playfair">87</span>
                       </div>
                     </div>
                   </div>

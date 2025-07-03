@@ -29,7 +29,7 @@ export const UseCaseGrid = () => {
       title: "Portfolio Screening",
       description: "Streamline due diligence and portfolio monitoring with automated scoring and alert systems.",
       features: ["Automated screening", "Risk monitoring", "Compliance reporting"],
-      color: "burnt-red"
+      color: "charcoal"
     }
   ];
 
@@ -39,7 +39,7 @@ export const UseCaseGrid = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-playfair font-bold text-charcoal mb-6">
             Built for Financial{' '}
-            <span className="text-burnt-red">Professionals</span>
+            <span className="text-charcoal">Professionals</span>
           </h2>
           <p className="text-xl text-charcoal/80 max-w-3xl mx-auto">
             Tailored intelligence for every role in the investment decision-making process.
@@ -49,13 +49,21 @@ export const UseCaseGrid = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div key={index} className="group">
-              <div className="bg-white rounded-sm p-8 shadow-lg border-l-4 border-${useCase.color} hover:shadow-xl transition-all duration-300 h-full">
+              <div className={`bg-white rounded-sm p-8 shadow-lg border-l-4 ${
+                useCase.color === 'soft-blue' ? 'border-soft-blue' :
+                useCase.color === 'sage-green' ? 'border-sage-green' :
+                useCase.color === 'brass' ? 'border-brass' : 'border-charcoal'
+              } hover:shadow-xl transition-all duration-300 h-full`}>
                 <div className="space-y-6">
                   <div className="space-y-3">
                     <div className="text-sm font-medium text-charcoal/60 uppercase tracking-wide">
                       {useCase.persona}
                     </div>
-                    <h3 className={`text-2xl font-semibold text-${useCase.color} font-playfair`}>
+                    <h3 className={`text-2xl font-semibold font-playfair ${
+                      useCase.color === 'soft-blue' ? 'text-soft-blue' :
+                      useCase.color === 'sage-green' ? 'text-sage-green' :
+                      useCase.color === 'brass' ? 'text-brass' : 'text-charcoal'
+                    }`}>
                       {useCase.title}
                     </h3>
                   </div>
@@ -67,14 +75,22 @@ export const UseCaseGrid = () => {
                   <div className="space-y-3">
                     {useCase.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
-                        <div className={`w-2 h-2 bg-${useCase.color} rounded-full`}></div>
+                        <div className={`w-2 h-2 rounded-full ${
+                          useCase.color === 'soft-blue' ? 'bg-soft-blue' :
+                          useCase.color === 'sage-green' ? 'bg-sage-green' :
+                          useCase.color === 'brass' ? 'bg-brass' : 'bg-charcoal'
+                        }`}></div>
                         <span className="text-charcoal">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="pt-4">
-                    <button className={`text-sm font-medium text-${useCase.color} hover:opacity-80 transition-opacity`}>
+                    <button className={`text-sm font-medium transition-opacity hover:opacity-80 ${
+                      useCase.color === 'soft-blue' ? 'text-soft-blue' :
+                      useCase.color === 'sage-green' ? 'text-sage-green' :
+                      useCase.color === 'brass' ? 'text-brass' : 'text-charcoal'
+                    }`}>
                       Learn More →
                     </button>
                   </div>
