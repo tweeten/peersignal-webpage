@@ -64,15 +64,15 @@ export const SignalScoreOverview = () => {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-sage-green rounded-full"></div>
+                  <div className="w-2 h-2 bg-gold-accent rounded-full"></div>
                   <span className="text-charcoal/70">Standardized 0-100 scoring scale</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-soft-blue rounded-full"></div>
+                  <div className="w-2 h-2 bg-gold-accent rounded-full"></div>
                   <span className="text-charcoal/70">Peer-relative positioning</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-brass rounded-full"></div>
+                  <div className="w-2 h-2 bg-gold-accent rounded-full"></div>
                   <span className="text-charcoal/70">Trend and momentum indicators</span>
                 </div>
               </div>
@@ -85,28 +85,43 @@ export const SignalScoreOverview = () => {
                     Score Components
                   </div>
                   
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-charcoal font-medium">Revenue Growth</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-12 h-1.5 bg-sage-green rounded-full" style={{width: '92%'}}></div>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-charcoal font-medium">Revenue Growth</span>
                         <span className="text-sm font-semibold font-playfair">92</span>
                       </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-charcoal font-medium">ROIC</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-10 h-1.5 bg-soft-blue rounded-full" style={{width: '81%'}}></div>
-                        <span className="text-sm font-semibold font-playfair">81</span>
+                      <div className="relative h-2 bg-gray-200 rounded-full">
+                        <div 
+                          className="absolute top-0 left-0 h-2 bg-sage-green rounded-full"
+                          style={{width: '92%'}}
+                        ></div>
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <span className="text-charcoal font-medium">EBITDA Margin</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-11 h-1.5 bg-brass rounded-full" style={{width: '87%'}}></div>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-charcoal font-medium">ROIC</span>
+                        <span className="text-sm font-semibold font-playfair">81</span>
+                      </div>
+                      <div className="relative h-2 bg-gray-200 rounded-full">
+                        <div 
+                          className="absolute top-0 left-0 h-2 bg-sage-green rounded-full"
+                          style={{width: '81%'}}
+                        ></div>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-charcoal font-medium">EBITDA Margin</span>
                         <span className="text-sm font-semibold font-playfair">87</span>
+                      </div>
+                      <div className="relative h-2 bg-gray-200 rounded-full">
+                        <div 
+                          className="absolute top-0 left-0 h-2 bg-sage-green rounded-full"
+                          style={{width: '87%'}}
+                        ></div>
                       </div>
                     </div>
                   </div>

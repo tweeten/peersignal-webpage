@@ -52,17 +52,37 @@ export const HeroSection = ({ onViewSample }: HeroSectionProps) => {
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-charcoal font-playfair">SignalScore™ Preview</h3>
-                  <div className="px-3 py-1 bg-sage-green/20 text-sage-green rounded-sm text-sm font-medium">
-                    Live Data
-                  </div>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between py-3 border-b border-cream">
                     <span className="text-charcoal/70 font-medium">SignalScore</span>
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-sage-green rounded-full flex items-center justify-center">
-                        <span className="font-bold text-white text-lg font-playfair">87</span>
+                      {/* Circle with score like in the uploaded image */}
+                      <div className="relative w-16 h-16">
+                        <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 64 64">
+                          <circle
+                            cx="32"
+                            cy="32"
+                            r="28"
+                            stroke="#e5e7eb"
+                            strokeWidth="6"
+                            fill="none"
+                          />
+                          <circle
+                            cx="32"
+                            cy="32"
+                            r="28"
+                            stroke="#87A96B"
+                            strokeWidth="6"
+                            fill="none"
+                            strokeDasharray={`${(87/100) * 175.93} 175.93`}
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-lg font-bold text-charcoal font-playfair">87</span>
+                        </div>
                       </div>
                       <span className="text-xs text-charcoal/60">out of 100</span>
                     </div>
@@ -80,7 +100,7 @@ export const HeroSection = ({ onViewSample }: HeroSectionProps) => {
                   
                   <div className="flex items-center justify-between py-3">
                     <span className="text-charcoal/70 font-medium">Trend Direction</span>
-                    <span className="font-semibold text-soft-blue">↗ Positive</span>
+                    <span className="font-semibold text-sage-green">↗ Positive</span>
                   </div>
                 </div>
               </div>

@@ -8,7 +8,7 @@ export const UseCaseGrid = () => {
       title: "Alpha Signal Sourcing",
       description: "Identify undervalued opportunities and market inefficiencies through composite scoring that reveals hidden value drivers.",
       features: ["Peer comparison analysis", "Signal strength indicators", "Historical performance context"],
-      color: "soft-blue"
+      color: "burnt-red"
     },
     {
       persona: "Boutique Fund PMs",
@@ -50,7 +50,7 @@ export const UseCaseGrid = () => {
           {useCases.map((useCase, index) => (
             <div key={index} className="group">
               <div className={`bg-white rounded-sm p-8 shadow-lg border-l-4 ${
-                useCase.color === 'soft-blue' ? 'border-soft-blue' :
+                useCase.color === 'burnt-red' ? 'border-burnt-red' :
                 useCase.color === 'sage-green' ? 'border-sage-green' :
                 useCase.color === 'brass' ? 'border-brass' : 'border-charcoal'
               } hover:shadow-xl transition-all duration-300 h-full`}>
@@ -60,7 +60,7 @@ export const UseCaseGrid = () => {
                       {useCase.persona}
                     </div>
                     <h3 className={`text-2xl font-semibold font-playfair ${
-                      useCase.color === 'soft-blue' ? 'text-soft-blue' :
+                      useCase.color === 'burnt-red' ? 'text-burnt-red' :
                       useCase.color === 'sage-green' ? 'text-sage-green' :
                       useCase.color === 'brass' ? 'text-brass' : 'text-charcoal'
                     }`}>
@@ -76,7 +76,7 @@ export const UseCaseGrid = () => {
                     {useCase.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
                         <div className={`w-2 h-2 rounded-full ${
-                          useCase.color === 'soft-blue' ? 'bg-soft-blue' :
+                          useCase.color === 'burnt-red' ? 'bg-burnt-red' :
                           useCase.color === 'sage-green' ? 'bg-sage-green' :
                           useCase.color === 'brass' ? 'bg-brass' : 'bg-charcoal'
                         }`}></div>
@@ -87,7 +87,7 @@ export const UseCaseGrid = () => {
 
                   <div className="pt-4">
                     <button className={`text-sm font-medium transition-opacity hover:opacity-80 ${
-                      useCase.color === 'soft-blue' ? 'text-soft-blue' :
+                      useCase.color === 'burnt-red' ? 'text-burnt-red' :
                       useCase.color === 'sage-green' ? 'text-sage-green' :
                       useCase.color === 'brass' ? 'text-brass' : 'text-charcoal'
                     }`}>
