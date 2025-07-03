@@ -1,12 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { HeroSection } from '@/components/HeroSection';
+import { SignalScoreOverview } from '@/components/SignalScoreOverview';
+import { UseCaseGrid } from '@/components/UseCaseGrid';
+import { PricingSection } from '@/components/PricingSection';
+import { FounderSection } from '@/components/FounderSection';
+import { Footer } from '@/components/Footer';
+import { EmailModal } from '@/components/EmailModal';
 
 const Index = () => {
+  const [showEmailModal, setShowEmailModal] = useState(false);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <Header />
+      <HeroSection onViewSample={() => setShowEmailModal(true)} />
+      <SignalScoreOverview />
+      <UseCaseGrid />
+      <PricingSection />
+      <FounderSection />
+      <Footer />
+      <EmailModal 
+        isOpen={showEmailModal} 
+        onClose={() => setShowEmailModal(false)} 
+      />
     </div>
   );
 };
